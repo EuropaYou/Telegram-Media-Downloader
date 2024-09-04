@@ -2,6 +2,12 @@
 
 I wrote this userscript two years ago and it's of no use to me now. This script downloads media from Telegram's web interface. It includes various functionalities such as automatic message checking, downloading media files, and managing download counts. Since I have wrote this script two years ago many functions doesn't work. You can fix them by contributing
 
+If anyone wants to use these features, you can use my fork. However, please note that my fork is very old and I no longer maintain or use it myself. The userscript was created two years ago to serve my own needs at the time.
+
+While the script *may* function and may be useful for others, Please understand that it may contain bugs or have compatibility issues with Telegram web interface(s).
+
+If you find the script helpful and would like to improve it, feel free to contribute to this project using my fork as a starting point. Pull requests and bug reports are welcome, and I will do my best to review and merge contributions.
+
 # Documentation
 
 I wrote this script mainly for web/k version don't have high expectations that this will work out of box.
