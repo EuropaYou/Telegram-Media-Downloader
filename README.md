@@ -1,80 +1,96 @@
-<div align="center">
+# I wrote this userscript two years ago and it's of no use to me now.
 
-# Telegram Video Downloader / Telegram Media Downloader
+I wrote this userscript two years ago and it's of no use to me now. This script downloads media from Telegram's web interface. It includes various functionalities such as automatic message checking, downloading media files, and managing download counts. Since I have wrote this script two years ago many functions doesn't work. You can fix them by contributing
 
-**Unlock Telegram: Download Anything You Like.**
+# Documentation
 
-![GitHub License](https://img.shields.io/github/license/Neet-Nestor/Telegram-Media-Downloader)
-![Greasy Fork Version](https://img.shields.io/greasyfork/v/446342-telegram-media-downloader)
-![Greasy Fork Downloads](https://img.shields.io/greasyfork/dt/446342-telegram-media-downloader)
+I wrote this script mainly for web/k version don't have high expectations that this will work out of box.
 
-</div>
+## Variables and Settings:
 
-## Overview
-This user script unlocks and enables download of images, GIFs, audios, and videos in Telegram webapps from chats, stories, and even private channels where downloading is disabled or restricted.
+- **autocheckNewMessages**: If enabled userscript *should* (I don't know if it will work) check for new messages. It works for:
+    -  Photo, Video, Round Videos and Audios.
+ 
+- **newAutocheckNewMessages**: If enabled, it checks for new (media) messages. It works for:
+    - Photo and Video.
 
-(Note: some features are only available for specific Telegram webapp version. e.g. Audio message download is only available for the K webapp version.)
-
-### What are user scripts?
-User scripts put you in control of your  browsing experience. Once installed, they automatically make the sites you visit better by adding features, making them easier to use, or taking out the annoying bits. The user scripts on Greasy Fork were written by other users and posted to share with the world. They're free to install and easy to use.
-
-## Installation
-### Greasy Fork
-1. install a user script manager
-
-    To use user scripts you need to first install a user script manager. Which user script manager you can use depends on which browser you use.
-
-    - Chrome: [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) or [Violentmonkey](https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag)
-    - Firefox: [Greasemonkey](https://addons.mozilla.org/firefox/addon/greasemonkey/), [Tampermonkey](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/), or [Violentmonkey](https://addons.mozilla.org/en-US/firefox/addon/violentmonkey/)
-    - Safari: [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) or [Userscripts](https://apps.apple.com/app/userscripts/id1463298887)
-    - Microsoft Edge: [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) or [Violentmonkey](https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag)
-    - Opera: [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) or [Violentmonkey](https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag)
-    - Maxthon: [Violentmonkey](https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag)
-
-    (Note, If you are using Tampermonkey extension in a Chrome-based browser, following [instructions](https://www.tampermonkey.net/faq.php#Q209) to enable Developer Mode.)
-
-2. Install this script by visiting Greasy Fork:
-    https://greasyfork.org/en/scripts/446342-telegram-media-downloader
-
-### Manual Installation
-1. install a user script manager
-
-    To use user scripts you need to first install a user script manager. Which user script manager you can use depends on which browser you use.
-
-    - Chrome: [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) or [Violentmonkey](https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag)
-    - Firefox: [Greasemonkey](https://addons.mozilla.org/firefox/addon/greasemonkey/), [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo), or [Violentmonkey](https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag)
-    - Safari: [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) or [Userscripts](https://apps.apple.com/app/userscripts/id1463298887)
-    - Microsoft Edge: [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) or [Violentmonkey](https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag)
-    - Opera: [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) or [Violentmonkey](https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag)
-    - Maxthon: [Violentmonkey](https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag)
-
-    (Note, If you are using Tampermonkey extension in a Chrome-based browser, following [instructions](https://www.tampermonkey.net/faq.php#Q209) to enable Developer Mode.)
+- **downloadTextMessages**: If enabled, it downloads text messages. It works for:
+    - Text messages.
     
-2. Open Tampermonkey Dashboard, drag & drop src/tel_download.js into it and clicks the "install" button
+- **dontCareIfDownloaded**: If enabled, it forces media to download. It works for:
+    - Any downloadable media.
 
-## How to Use
-This script only works on Telegram Webapp.
+- **autoGrid**: If enabled and chat's media tab is open it hides visibility of media items in the chat's media tab. **It is highly experimental and has no use *for now***.
 
-For channels and chats that allow saving content, this script will have no effect. Please just use the official download button provided by the telegram webapp instead.
+- **autodownload**: If enabled and media player is open. It downloads media It works for:
+    - Photo and Video.
 
-For channels and chats that disable downloading and restrict saving content, this script will add the download button back for images, GIFs and videos.
+- **goPrevious**: If enabled it clicks previous button (in media player). If enabled with **autodownload** it allows users to automatically download media.
 
-![Image Download](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2VjNmU2ZDM0YTFlOWY4YTMzZDZmNjVlMDE2ODQ4OGY4N2E3MDFkNSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/lqCVcw0pCd2VA3zqoE/giphy.gif)
-![GIF Download](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzYwMzM3ZTMzYmI1MzA4M2EyYmY0NTFlOTg4OWFhNjhjNDk5YTkzYiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/wnYzW4vwpPdeuo62nQ/giphy.gif)
-![Video Download](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXcxYnJxaXMxcW05YW5rZ2YzZzE0bTU4aTBwYXI1N3pmdnVzbDFrdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EEPbblwmSpteAmwLls/giphy.gif)
-![Story Download](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3Z5Y2VzM2QzbW1xc3ZwNTQ2N3Q0a3lnanpxdW55c2Qzajl5NXZsaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xJFjBGi8isHPR5cuHl/giphy.gif)
+- **goNext**:  If enabled it clicks next button (in media player). If enabled with **autodownload** it allows users to automatically download media.
 
-For videos, a progress bar will show on the bottom-right corder after you started downloading. For images and audios, there won't be a progress bar.
+- **previousVideoURL**, **previousImageURL**, and **_previousImageURL**: String used to store the URLs of previously downloaded media items.
 
-### Supported Webapp Versions
-There are 2 different versions of telegram webapps:
-- https://webk.telegram.org / https://web.telegram.org/k/
-- https://webz.telegram.org / https://web.telegram.org/a/
+- **downloadCount**: Variable used to display how many downloads are taking place. Can be used to control concurrent downloads.
 
-This script should work on both versions of webapp. If you are using another different version of webapp and find this script does not work, please raise an issue to our [GitHub repo](https://github.com/Neet-Nestor/Telegram-Media-Downloader/issues). 
+## Functions
 
-### Check Downloading Progress
-A progress bar will show on the bottom-right of the screen for videos. You can also check [DevTools console](https://developer.chrome.com/docs/devtools/open/) for logs.
+### Config Functions
 
-## Support Author
-If you like this script, you can support me via [Venmo](https://venmo.com/u/NeetNestor) or [buy me a coffee](https://ko-fi.com/neetnestor) :)
+- **toggleBooleanValue**: Function that toggles on and off, of a given boolean variable.
+
+- **toggleAutocheckNewMessages**, **toggleDownloadTextMessages**, **toggleAutodownload**, **toggleNewAutocheckNewMessages**, and **toggleDontCareIfDownloaded**: Functions that toggle their respective boolean variables and rebuild the menu (Mentioned later).
+
+- **rebuildMenu**: Function that unregisters and re-registers the menu commands to reflect changes in the script settings.
+
+### Download Functions:
+
+When a video download starts, both **downloadCount** and **totalDownloadCount** are incremented. After the download process is completed, whether successful or not, **downloadCount** is decremented. This ensures that the count accurately reflects the number of ongoing downloads at any given time.
+
+If download failed it should print what happened.
+
+All download functions checks if media has been downloaded already. Which you can disable by setting **dontCareIfDownloaded** to true.
+
+- **tel_download_video**: Downloads a video from Telegram.
+
+    > Parameters: url, _chatName, _sender.
+
+    ```This function checks if the video has already been downloaded and skips the download if dontCareIfDownloaded is true. It fetches the video in parts, concatenates the blobs, and saves the file.```
+
+- **tel_download_audio**: Downloads an audio file from Telegram.
+
+    > Parameters: url, _chatName, _sender.
+
+    ```Similar to tel_download_video, but for audio files. It fetches the audio in parts, concatenates the blobs, and saves the file.```
+
+- **tel_download_gif**: Downloads a GIF from Telegram.
+
+    > Parameters: url, _chatName, _sender.
+
+    ```Fetches the GIF in parts, concatenates the blobs, and saves the file.```
+
+- **tel_download_image**: Downloads an image from Telegram.
+
+    > Parameters: imageUrl, _chatName, _sender.
+
+    ```Directly downloads the image by creating a link and triggering a download.```
+
+### Navigation Functions
+
+- **goCheck**: Navigates between media items based on the **goPrevious** and **goNext** variables.
+
+    ```Clicks on the left or right navigation buttons in the media viewer to switch between media items.```
+
+### Utility Functions
+
+- **isPeerTitleEqualsTo**: Checks if the peer title matches a given variable.
+
+    > Parameters: variable.
+    
+    ```Used to check if the peer title matches a specific string or array of strings.```
+
+- **createImageButtons**: Creates buttons for downloading images.
+
+    > Parameters: ele, imageUrl.
+    
+    ```Creates a container with download and open-in-new-tab buttons for images.```
